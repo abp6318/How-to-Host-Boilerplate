@@ -1,0 +1,24 @@
+/* *{
+    padding:0;
+    margin:0;
+} */
+
+code{
+    background-color: rgb(232, 232, 232);
+    border:thin solid rgb(206, 206, 206);
+    padding:6px;
+    border-radius: 10px;
+}
+
+table, th, tr, td{
+    border: thin solid black;
+}
+
+td{
+    padding: 9px 6px;
+    white-space: nowrap;
+}
+
+img{
+    width: 25%;
+}

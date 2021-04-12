@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Host</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+
+    <h2>GitHub</h2>
+    <p><a target="_blank" href="https://github.com/abp6318/How-to-Host-Boilerplate">https://github.com/abp6318/How-to-Host-Boilerplate</a></p>
+
+    <hr>
+
+    <h2>Cisco AnyConnect for RIT</h2>
+    <p>Cisco AnyConnect is something you'll need to host and view your website on RIT's Solace server. You can find your computer specific download here: <a target="_blank" href="https://www.rit.edu/its/services/network-communication/vpn">https://www.rit.edu/its/services/network-communication/vpn</a></p>
+
+    <hr>
+
+    <h2>Hosting Through RIT Servers</h2>
+    <h4>Solace (Login via ssh)</h4>
+    <p>To log into Solace from a terminal, enter the following: <code>ssh ritUsername@solace.ist.rit.edu</code>. Don't forget to change the username to your own. Once run, enter your RIT password, and you're in! To view your Solace directory you do have to use Cisco AnyConnect.</p>
+
+    <h4>Banjo (Login via ssh)</h4>
+    <p>To log into Banjo from a terminal, enter the following: <code>ssh ritUsername@banjo.rit.edu</code>. Don't forget to change the username to your own. Once run, enter your RIT password, and you're in! To view your Banjo directory you do NOT have to use Cisco AnyConnect.</p>
+
+    <p>To logout of an ssh connection, press <code>Crtl+C</code></p>
+
+    <h4>What now?</h4>
+    <p>Once logged in, you can <code>cd</code> into the <code>./www/</code> directory and create your website here. I recommend making a new directory and putting your website there.</p>
+    <p>For uploading any existing material, refer to this site: <a target="_blank" href="https://www.simplified.guide/ssh/copy-file">https://www.simplified.guide/ssh/copy-file</a>. Or you could look at the commands I pasted below.</p>
+    <table>
+        <tr>
+            <th>Function</th>
+            <th>Command Line Input Example</th>
+        </tr>
+        <tr>
+            <td>Single file, Local to Remote</td>
+            <td><code>scp myfile.txt remoteuser@remoteserver:/remote/folder/</code></td>
+        </tr>
+        <tr>
+            <td>Single file, Remote to Local</td>
+            <td><code>scp remoteuser@remoteserver:/remote/folder/remotefile.txt localfile.txt</code></td>
+        </tr>
+        <tr>
+            <td>Multiple files, Local to Remote</td>
+            <td><code>scp myfile.txt myfile2.txt remoteuser@remoteserver:/remote/folder/</code></td>
+        </tr>
+        <tr>
+            <td>All files, Local to Remote</td>
+            <td><code>scp * remoteuser@remoteserver:/remote/folder/</code></td>
+        </tr>
+        <tr>
+            <td>All files and folders (recursively), Local to Remote</td>
+            <td><code>scp -r * remoteuser@remoteserver:/remote/folder/</code></td>
+        </tr>
+    </table>
+
+    <p>You'll probably want to use the last example in the table to import all of the files and directories into the server.</p>
+
+    <h4>Viewing Your Website</h4>
+    <p>Make sure you have Cisco AnyConnect installed and running to view your site on Solace.</p>
+
+    <h4>Solace</h4>
+    <p>Your link will look something like this, followed by the path to your directory: <a target="_blank" href="https://solace.ist.rit.edu/~ritUsername/">https://solace.ist.rit.edu/~ritUsername/</a></p>
+    
+    <h4>Banjo</h4>
+    <p>Note: Your the Banjo server URL starts with people and NOT banjo. Your link will look something like this, followed by the path to your directory: <a target="_blank" href="https://people.rit.edu/~ritUsername/">https://solace.ist.rit.edu/~ritUsername/</a></p>
+
+</body>
+</html>
